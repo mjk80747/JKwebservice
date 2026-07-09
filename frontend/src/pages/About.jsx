@@ -12,10 +12,10 @@ const About = () => {
             Our Mission
           </span>
           <h1 style={{ fontSize: '3rem', marginTop: '0.4rem', marginBottom: '1rem' }}>
-            Engineering Premium Hospitality UI
+            Engineering Premium Web Applications
           </h1>
           <p style={{ color: 'var(--text-muted)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
-            JK Web Solutions was founded with a singular directive: to replace boring static restaurant pages with fast, high-converting, fluid digital experiences.
+            JK Web Solutions was founded with a singular directive: to replace boring static web pages with fast, high-converting, fluid digital experiences.
           </p>
         </div>
 
@@ -24,10 +24,10 @@ const About = () => {
           <div>
             <h2 style={{ fontSize: '2rem', marginBottom: '1.2rem', color: '#fff' }}>Who We Are</h2>
             <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', marginBottom: '1.2rem' }}>
-              We are an elite boutique agency of digital product designers and MERN full-stack engineers. We specialize in configuring gorgeous canvas-animations, micro-interactions, and custom database platforms for cafes, bakeries, lounges, and Michelin-starred restaurants.
+              We are an elite boutique agency of digital product designers and MERN full-stack engineers. We specialize in configuring gorgeous canvas-animations, micro-interactions, and custom database platforms for restaurants, fine dining, cafés, cloud kitchens, sushi lounges, bakeries, and modern business applications.
             </p>
             <p style={{ color: 'var(--text-muted)', lineHeight: '1.7' }}>
-              We believe a restaurant website is more than an address holder; it is a high-volume conversion funnel. By integrating custom tables side ordering simulators, dynamic layouts, and direct billing tools, we keep restaurants fully booked and customer interactions smooth.
+              We believe a business website is more than an address holder; it is a high-volume conversion funnel. By integrating custom reservation engines, ordering simulators, dynamic layouts, and direct billing tools, we keep customer interactions smooth and conversion rates high.
             </p>
           </div>
 

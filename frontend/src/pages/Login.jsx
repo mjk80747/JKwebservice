@@ -78,7 +78,7 @@ const Login = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="name@restaurant.com"
+                placeholder="name@company.com"
                 className="form-input"
               />
             </div>
@@ -110,7 +110,7 @@ const Login = () => {
             borderTop: '1px solid rgba(255,255,255,0.06)',
             paddingTop: '1.5rem'
           }}>
-            New restaurant owner?{' '}
+            New business owner?{' '}
             <Link to="/signup" style={{ color: 'var(--gold)', fontWeight: 500 }}>
               Create Account
             </Link>

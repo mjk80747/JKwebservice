@@ -58,7 +58,7 @@ const Portfolio = () => {
             Our Catalog
           </span>
           <h1 style={{ fontSize: '2.8rem', marginTop: '0.4rem', marginBottom: '1rem' }}>
-            Restaurant Design Architectures
+            Premium Web Design Showcases
           </h1>
           <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto', fontSize: '1rem' }}>
             Browse through our award-winning client templates. Click a template to run interactive demos and check built-in conversion features.

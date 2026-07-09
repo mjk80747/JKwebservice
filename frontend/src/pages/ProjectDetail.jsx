@@ -291,7 +291,7 @@ const ProjectDetail = () => {
             </div>
             
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '2rem' }}>
-              Tick extra features below to calculate an immediate cost estimation for your custom restaurant launch project.
+              Tick extra features below to calculate an immediate cost estimation for your custom web project.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

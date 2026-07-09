@@ -51,7 +51,7 @@ const Signup = () => {
             <img src="/logo.jpg" alt="JK Web Solutions Logo" style={{ height: '60px', width: '60px', borderRadius: '12px', marginBottom: '1.2rem', border: '1px solid rgba(223, 183, 108, 0.3)', boxShadow: '0 0 15px rgba(223, 183, 108, 0.1)' }} />
             <h1 style={{ fontSize: '2rem', color: 'var(--gold)', marginBottom: '0.5rem' }}>Create Client Profile</h1>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-              Onboard your restaurant to collaborate on custom website builds.
+              Onboard your business to collaborate on custom website builds.
             </p>
           </div>
 
@@ -99,7 +99,7 @@ const Signup = () => {
                 required
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="name@restaurant.com"
+                placeholder="name@company.com"
                 className="form-input"
               />
             </div>
@@ -121,7 +121,7 @@ const Signup = () => {
 
             <div className="form-group">
               <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                <Utensils size={12} /> Restaurant / Café Name
+                <Utensils size={12} /> Business / Restaurant Name
               </label>
               <input
                 type="text"
@@ -129,7 +129,7 @@ const Signup = () => {
                 required
                 value={formData.restaurantName}
                 onChange={handleInputChange}
-                placeholder="E.g., Sakura Grill"
+                placeholder="E.g., Sakura Grill, Bakery, or Tech Corp"
                 className="form-input"
               />
             </div>

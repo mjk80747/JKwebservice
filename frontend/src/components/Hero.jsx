@@ -83,7 +83,7 @@ const Hero = () => {
             marginBottom: '2rem'
           }}>
             <Sparkles size={14} />
-            <span>Award-Winning Restaurant Web Development</span>
+            <span>Premium Business & Restaurant Web Applications</span>
           </div>
 
           <h1 style={{
@@ -111,7 +111,7 @@ const Hero = () => {
             margin: '0 auto 2.5rem auto',
             lineHeight: '1.7'
           }}>
-            Move beyond static PDF menus. Elevate your restaurant brand with custom-tailored, fluidly animated platforms configured for reservation, ordering, and revenue CRM.
+            Move beyond static templates. Elevate your brand with custom-tailored, fluidly animated platforms configured for bookings, reservations, ordering, and revenue CRM.
           </p>
 
           <div style={{

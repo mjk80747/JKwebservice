@@ -34,7 +34,7 @@ const Footer = () => {
               <span>JK Web <span style={{ color: 'var(--gold)' }}>Solutions</span></span>
             </Link>
             <p style={{ lineHeight: '1.7', marginBottom: '1.5rem' }}>
-              We build award-winning, fluidly animated, high-converting digital storefronts and booking systems for premium restaurants and hospitality brands.
+              We build award-winning, fluidly animated, high-converting digital storefronts and custom systems for restaurants, fine dining, cafés, cloud kitchens, sushi lounges, bakeries, and small businesses.
             </p>
             <div style={{ display: 'flex', gap: '1rem' }}>
               <a href="https://github.com/mundlapati-jayakrishna" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)', transition: '0.3s' }}><Github size={20} /></a>

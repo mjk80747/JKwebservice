@@ -51,7 +51,7 @@ const Contact = () => {
             Get In Touch
           </span>
           <h1 style={{ fontSize: '3rem', marginTop: '0.4rem', marginBottom: '1rem' }}>
-            Start Your Restaurant's Digital Transition
+            Start Your Digital Transition
           </h1>
           <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto' }}>
             Have a custom design layout or need pricing info? Drop us a note. Our agency responds within 12 business hours.
@@ -65,7 +65,7 @@ const Contact = () => {
             <div>
               <h2 style={{ fontSize: '1.8rem', color: '#fff', marginBottom: '1.5rem' }}>Contact Information</h2>
               <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', marginBottom: '2rem' }}>
-                We work internationally with cafe chains, Michelin restaurants, and cloud kitchen operators. Talk directly with our developers to review specifications.
+                We work internationally with restaurants, fine dining, cafés, cloud kitchens, sushi lounges, bakeries, and custom business applications. Talk directly with our developers to review specifications.
               </p>
             </div>
 
@@ -144,7 +144,7 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="name@restaurant.com"
+                    placeholder="name@company.com"
                     className="form-input"
                   />
                 </div>

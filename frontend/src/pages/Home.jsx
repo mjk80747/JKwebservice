@@ -53,7 +53,7 @@ const Home = () => {
               <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                 Showcase Gallery
               </span>
-              <h2 style={{ fontSize: '2.2rem', marginTop: '0.4rem' }}>Featured Restaurant Architectures</h2>
+              <h2 style={{ fontSize: '2.2rem', marginTop: '0.4rem' }}>Featured Design Architectures</h2>
             </div>
             <Link to="/portfolio" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: 'var(--gold)', fontWeight: 500 }}>
               View All Showcases <ChevronRight size={18} />
@@ -101,7 +101,7 @@ const Home = () => {
             <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
               Client Success
             </span>
-            <h2 style={{ fontSize: '2.2rem', marginTop: '0.4rem' }}>What Restaurant Owners Say</h2>
+            <h2 style={{ fontSize: '2.2rem', marginTop: '0.4rem' }}>What Our Clients Say</h2>
           </div>
 
           <div className="grid-2">
@@ -190,7 +190,7 @@ const Home = () => {
                   <img 
                     src="/founder.jpg" 
                     alt="Mundlapati Jayakrishna portrait" 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '53% 36%', transform: 'scale(1.2)' }}
                     onError={(e) => {
                       e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop";
                     }}
@@ -213,9 +213,9 @@ const Home = () => {
             margin: '0 auto'
           }}>
             <Mail size={36} style={{ color: 'var(--gold)', marginBottom: '1.5rem' }} />
-            <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Get Restaurant Digital Growth Tips</h2>
+            <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Get Digital Growth Tips</h2>
             <p style={{ color: 'var(--text-muted)', maxWidth: '550px', margin: '0 auto 2.5rem auto', lineHeight: '1.6' }}>
-              Subscribe to our bi-weekly newsletter list packed with conversion secrets, menu layout optimization tips, and SEO tricks for restaurant business expansion.
+              Subscribe to our bi-weekly newsletter packed with conversion secrets, page optimization tips, and SEO tricks for business growth and digital expansion.
             </p>
 
             {subscribed ? (
