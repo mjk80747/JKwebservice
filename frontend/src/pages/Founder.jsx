@@ -17,6 +17,7 @@ import {
   CheckCircle,
   FileText
 } from 'lucide-react';
+import CallToActionSection from '../components/CallToActionSection';
 
 const Founder = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -106,7 +107,8 @@ const Founder = () => {
     : skills.filter(skill => skill.category === activeTab);
 
   return (
-    <section style={{ padding: '5rem 0', minHeight: '100vh' }}>
+    <div>
+      <section style={{ padding: '5rem 0', minHeight: '100vh' }}>
       <div className="container animate-fade-in">
         
         {/* Profile Card / Header section */}
@@ -125,7 +127,7 @@ const Founder = () => {
             pointerEvents: 'none'
           }} />
 
-          <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: '3rem', alignItems: 'center' }} className="grid-responsive">
+          <div className="grid-founder-bio">
             <div style={{ position: 'relative', width: '280px', height: '280px', margin: '0 auto' }}>
               <div style={{
                 position: 'absolute',
@@ -170,7 +172,7 @@ const Founder = () => {
               }}>
                 Meet The Founder
               </span>
-              <h1 style={{ fontSize: '3rem', color: '#fff', marginBottom: '0.5rem' }}>
+              <h1 style={{ fontSize: 'var(--fs-h1)', color: '#fff', marginBottom: '0.5rem' }}>
                 Mundlapati Jayakrishna
               </h1>
               <p style={{ 
@@ -229,11 +231,11 @@ const Founder = () => {
         </div>
 
         {/* Two-column layout for Skills & Experience */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '3rem', marginBottom: '4rem' }} className="grid-responsive-equal">
+        <div className="grid-founder-equal" style={{ marginBottom: '4rem' }}>
           
           {/* Professional Experience Section */}
           <div>
-            <h2 style={{ fontSize: '2.2rem', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+            <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
               <Briefcase style={{ color: 'var(--gold)' }} size={26} />
               <span>Professional Experience</span>
             </h2>
@@ -363,12 +365,12 @@ const Founder = () => {
 
         {/* Certifications Showreel */}
         <div style={{ marginTop: '5rem' }}>
-          <h2 style={{ fontSize: '2.2rem', textAlign: 'center', marginBottom: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.8rem' }}>
+          <h2 style={{ fontSize: 'var(--fs-h2)', textAlign: 'center', marginBottom: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.8rem' }}>
             <Award style={{ color: 'var(--gold)' }} size={26} />
             <span>Honors & Certifications</span>
           </h2>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             {certifications.map((cert, idx) => (
               <div key={idx} className="glass-panel glass-panel-hover" style={{ padding: '2rem', display: 'flex', gap: '1.2rem' }}>
                 <div style={{ 
@@ -415,6 +417,8 @@ const Founder = () => {
         }
       `}</style>
     </section>
+    <CallToActionSection />
+  </div>
   );
 };
 

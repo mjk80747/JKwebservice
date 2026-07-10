@@ -87,7 +87,7 @@ const Hero = () => {
           </div>
 
           <h1 style={{
-            fontSize: '3.6rem',
+            fontSize: 'var(--fs-hero)',
             lineHeight: '1.1',
             marginBottom: '1.5rem',
             maxWidth: '900px',
@@ -106,7 +106,7 @@ const Hero = () => {
 
           <p style={{
             color: 'var(--text-muted)',
-            fontSize: '1.15rem',
+            fontSize: 'var(--fs-hero-p)',
             maxWidth: '650px',
             margin: '0 auto 2.5rem auto',
             lineHeight: '1.7'
@@ -130,11 +130,8 @@ const Hero = () => {
         </div>
 
         {/* Agency Highlights section */}
-        <div className="glass-panel" style={{
+        <div className="glass-panel hero-highlights-grid" style={{
           padding: '2.5rem',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '2rem',
           textAlign: 'center',
           marginTop: '2rem'
         }}>

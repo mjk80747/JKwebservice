@@ -13,10 +13,7 @@ const Footer = () => {
       color: 'var(--text-muted)'
     }}>
       <div className="container">
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '2fr 1fr 1fr 1fr',
-          gap: '3rem',
+        <div className="footer-grid" style={{
           marginBottom: '3rem'
         }}>
           <div>

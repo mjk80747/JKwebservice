@@ -50,7 +50,7 @@ const Contact = () => {
           <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
             Get In Touch
           </span>
-          <h1 style={{ fontSize: '3rem', marginTop: '0.4rem', marginBottom: '1rem' }}>
+          <h1 style={{ fontSize: 'var(--fs-h1)', marginTop: '0.4rem', marginBottom: '1rem' }}>
             Start Your Digital Transition
           </h1>
           <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto' }}>
@@ -63,7 +63,7 @@ const Contact = () => {
           {/* Contact Details pane */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
             <div>
-              <h2 style={{ fontSize: '1.8rem', color: '#fff', marginBottom: '1.5rem' }}>Contact Information</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: '1.5rem' }}>Contact Information</h2>
               <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', marginBottom: '2rem' }}>
                 We work internationally with restaurants, fine dining, cafés, cloud kitchens, sushi lounges, bakeries, and custom business applications. Talk directly with our developers to review specifications.
               </p>
@@ -106,7 +106,7 @@ const Contact = () => {
           <div className="glass-panel" style={{ padding: '2.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem', color: 'var(--gold)' }}>
               <MessageSquare size={20} />
-              <h3 style={{ fontSize: '1.4rem', margin: 0 }}>General Inquiries</h3>
+              <h3 style={{ fontSize: 'var(--fs-h3)', margin: 0 }}>General Inquiries</h3>
             </div>
 
             {success ? (

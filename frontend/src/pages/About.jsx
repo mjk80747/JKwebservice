@@ -1,9 +1,11 @@
 import React from 'react';
 import { Shield, Sparkles, Zap, Award } from 'lucide-react';
+import CallToActionSection from '../components/CallToActionSection';
 
 const About = () => {
   return (
-    <section style={{ padding: '5rem 0' }}>
+    <div>
+      <section style={{ padding: '5rem 0' }}>
       <div className="container animate-fade-in">
         
         {/* Core Header section */}
@@ -11,7 +13,7 @@ const About = () => {
           <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
             Our Mission
           </span>
-          <h1 style={{ fontSize: '3rem', marginTop: '0.4rem', marginBottom: '1rem' }}>
+          <h1 style={{ fontSize: 'var(--fs-h1)', marginTop: '0.4rem', marginBottom: '1rem' }}>
             Engineering Premium Web Applications
           </h1>
           <p style={{ color: 'var(--text-muted)', maxWidth: '650px', margin: '0 auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
@@ -22,7 +24,7 @@ const About = () => {
         {/* Agency details grid */}
         <div className="grid-2" style={{ marginBottom: '4rem', alignItems: 'center' }}>
           <div>
-            <h2 style={{ fontSize: '2rem', marginBottom: '1.2rem', color: '#fff' }}>Who We Are</h2>
+            <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: '1.2rem', color: '#fff' }}>Who We Are</h2>
             <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', marginBottom: '1.2rem' }}>
               We are an elite boutique agency of digital product designers and MERN full-stack engineers. We specialize in configuring gorgeous canvas-animations, micro-interactions, and custom database platforms for restaurants, fine dining, cafés, cloud kitchens, sushi lounges, bakeries, and modern business applications.
             </p>
@@ -31,13 +33,7 @@ const About = () => {
             </p>
           </div>
 
-          <div style={{
-            position: 'relative',
-            height: '350px',
-            borderRadius: '16px',
-            overflow: 'hidden',
-            border: '1px solid var(--border-color)'
-          }}>
+          <div className="about-image-wrapper">
             <img 
               src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" 
               alt="restaurant agency developers workspace"
@@ -47,7 +43,7 @@ const About = () => {
         </div>
 
         {/* Core values block */}
-        <h2 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '2.5rem', color: '#fff' }}>
+        <h2 style={{ fontSize: 'var(--fs-h2)', textAlign: 'center', marginBottom: '2.5rem', color: '#fff' }}>
           Our Founding Directives
         </h2>
 
@@ -84,7 +80,9 @@ const About = () => {
         </div>
 
       </div>
-    </section>
+      </section>
+      <CallToActionSection />
+    </div>
   );
 };
 

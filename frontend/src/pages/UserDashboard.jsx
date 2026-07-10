@@ -212,10 +212,10 @@ const UserDashboard = () => {
           <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500 }}>
             Client Portal Hub
           </span>
-          <h1 style={{ fontSize: '2.8rem', marginTop: '0.4rem' }}>Collaborative Project Workspaces</h1>
+          <h1 style={{ fontSize: 'var(--fs-h1)', marginTop: '0.4rem' }}>Collaborative Project Workspaces</h1>
         </div>
 
-        <div className="grid-2" style={{ gridTemplateColumns: '0.6fr 1.4fr', gap: '2.5rem' }}>
+        <div className="grid-dashboard">
           
           {/* Workspace select sidebar */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

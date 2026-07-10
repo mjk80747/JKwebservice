@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
+import { MessageCircle, Phone } from 'lucide-react';
 
 // Components
 import Navbar from './components/Navbar';
@@ -67,6 +68,28 @@ function AppContent() {
         </Routes>
       </main>
       {showHeaderFooter && <Footer />}
+
+      {/* Persistent Floating Actions Dock */}
+      {showHeaderFooter && (
+        <div className="floating-actions-dock">
+          <a 
+            href="https://wa.me/918074733591" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="floating-btn whatsapp-btn"
+            title="Chat on WhatsApp"
+          >
+            <MessageCircle size={22} />
+          </a>
+          <Link 
+            to="/contact" 
+            className="floating-btn quote-btn"
+            title="Book a Call / Get a Quote"
+          >
+            <Phone size={22} />
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

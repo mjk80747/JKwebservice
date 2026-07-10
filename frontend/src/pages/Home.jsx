@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import ProjectCard from '../components/ProjectCard';
-import ThemeSandbox from '../components/ThemeSandbox';
 import { ArrowRight, Mail, Utensils, MessageCircle, ChevronRight, Award } from 'lucide-react';
 
 const Home = () => {
@@ -53,7 +52,7 @@ const Home = () => {
               <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                 Showcase Gallery
               </span>
-              <h2 style={{ fontSize: '2.2rem', marginTop: '0.4rem' }}>Featured Design Architectures</h2>
+              <h2 style={{ fontSize: 'var(--fs-h2)', marginTop: '0.4rem' }}>Featured Design Architectures</h2>
             </div>
             <Link to="/portfolio" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: 'var(--gold)', fontWeight: 500 }}>
               View All Showcases <ChevronRight size={18} />
@@ -76,21 +75,79 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Interactive Theme Sandbox Section */}
-      <section style={{ padding: '5rem 0', borderTop: '1px solid var(--border-color)' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 2.5rem auto' }}>
+      {/* Upfront Pricing Section */}
+      <section style={{ padding: '5rem 0', borderTop: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.02)' }}>
+        <div className="container animate-fade-in">
+          <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 4rem auto' }}>
             <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-              Try Before Hiring
+              Transparent Investment
             </span>
-            <h2 style={{ fontSize: '2.2rem', marginTop: '0.4rem', marginBottom: '1rem' }}>
-              Full Control Over Creative Directives
+            <h2 style={{ fontSize: 'var(--fs-h2)', marginTop: '0.4rem', marginBottom: '1rem' }}>
+              Clear, Growth-Oriented Pricing Packages
             </h2>
             <p style={{ color: 'var(--text-muted)' }}>
-              We build customizable component architectures. Take a look at this responsive item card simulator to experience live theme swaps instantly.
+              No hidden fees, no marketplace commissions. Choose the design package tailored to your business scale.
             </p>
           </div>
-          <ThemeSandbox />
+
+          <div className="grid-3">
+            {/* Starter Plan */}
+            <div className="glass-panel glass-panel-hover" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '0.5rem' }}>Starter Archetype</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '1.5rem', height: '40px' }}>Perfect for local dining bistros, bakeries & single-location artisan cafés.</p>
+              <div style={{ marginBottom: '2rem' }}>
+                <span style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--gold)' }}>$800</span>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}> / flat retainer</span>
+              </div>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.9rem', color: 'var(--text-light)', marginBottom: '2.5rem', flexGrow: 1 }}>
+                <li>✓ 1 Premium Showcase Template</li>
+                <li>✓ Responsive Mobile Optimization</li>
+                <li>✓ Standard Reservation Form</li>
+                <li>✓ Core SEO & Search Indexing</li>
+                <li>✓ 3 Months Maintenance Support</li>
+              </ul>
+              <Link to="/contact" className="btn btn-secondary" style={{ width: '100%' }}>Select Starter</Link>
+            </div>
+
+            {/* Growth Plan */}
+            <div className="glass-panel glass-panel-hover" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', height: '100%', border: '1px solid var(--gold)', boxShadow: '0 0 20px var(--gold-glow)' }}>
+              <div style={{ alignSelf: 'flex-start', background: 'var(--gold)', color: '#000', fontSize: '0.75rem', fontWeight: 600, padding: '0.2rem 0.6rem', borderRadius: '4px', marginBottom: '1rem', textTransform: 'uppercase' }}>Most Popular</div>
+              <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '0.5rem' }}>Growth Portal</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '1.5rem', height: '40px' }}>For high-volume restaurateurs looking to bypass marketplace commissions.</p>
+              <div style={{ marginBottom: '2rem' }}>
+                <span style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--gold)' }}>$1,500</span>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}> / flat retainer</span>
+              </div>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.9rem', color: 'var(--text-light)', marginBottom: '2.5rem', flexGrow: 1 }}>
+                <li>✓ Custom Branding UI Details</li>
+                <li>✓ Multi-Page Fluid Architecture</li>
+                <li>✓ Advanced Booking & Reservation Engine</li>
+                <li>✓ Click-and-Collect Menu Ordering</li>
+                <li>✓ Stripe/PayPal Gateway Setup</li>
+                <li>✓ 6 Months Priority Maintenance</li>
+              </ul>
+              <Link to="/contact" className="btn btn-primary" style={{ width: '100%' }}>Select Growth</Link>
+            </div>
+
+            {/* Premium Plan */}
+            <div className="glass-panel glass-panel-hover" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '0.5rem' }}>Premium Enterprise</h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '1.5rem', height: '40px' }}>For fine dining chains, cloud kitchens, and premium luxury lounges.</p>
+              <div style={{ marginBottom: '2rem' }}>
+                <span style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--gold)' }}>$2,800</span>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}> / flat retainer</span>
+              </div>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.9rem', color: 'var(--text-light)', marginBottom: '2.5rem', flexGrow: 1 }}>
+                <li>✓ 100% Bespoke Immersive Design</li>
+                <li>✓ Interactive Dining Canvas Physics</li>
+                <li>✓ Multi-Location CRM Dashboard Integration</li>
+                <li>✓ Automated Real-Time SMS/Email Alerts</li>
+                <li>✓ Comprehensive Analytics Setup</li>
+                <li>✓ 12 Months VIP Dedicated Support</li>
+              </ul>
+              <Link to="/contact" className="btn btn-secondary" style={{ width: '100%' }}>Select Premium</Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -101,7 +158,7 @@ const Home = () => {
             <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
               Client Success
             </span>
-            <h2 style={{ fontSize: '2.2rem', marginTop: '0.4rem' }}>What Our Clients Say</h2>
+            <h2 style={{ fontSize: 'var(--fs-h2)', marginTop: '0.4rem' }}>What Our Clients Say</h2>
           </div>
 
           <div className="grid-2">
@@ -153,7 +210,7 @@ const Home = () => {
                 <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                   Founder Spotlight
                 </span>
-                <h2 style={{ fontSize: '2.2rem', marginTop: '0.4rem', marginBottom: '1.2rem' }}>
+                <h2 style={{ fontSize: 'var(--fs-h2)', marginTop: '0.4rem', marginBottom: '1.2rem' }}>
                   Engineered by Mundlapati Jayakrishna
                 </h2>
                 <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', marginBottom: '1.5rem' }}>
@@ -213,7 +270,7 @@ const Home = () => {
             margin: '0 auto'
           }}>
             <Mail size={36} style={{ color: 'var(--gold)', marginBottom: '1.5rem' }} />
-            <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Get Digital Growth Tips</h2>
+            <h2 style={{ fontSize: 'var(--fs-h2)', marginBottom: '1rem' }}>Get Digital Growth Tips</h2>
             <p style={{ color: 'var(--text-muted)', maxWidth: '550px', margin: '0 auto 2.5rem auto', lineHeight: '1.6' }}>
               Subscribe to our bi-weekly newsletter packed with conversion secrets, page optimization tips, and SEO tricks for business growth and digital expansion.
             </p>
@@ -223,7 +280,7 @@ const Home = () => {
                 ✓ Thank you for subscribing! We'll keep you updated.
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} style={{
+              <form onSubmit={handleSubscribe} className="newsletter-form" style={{
                 display: 'flex',
                 maxWidth: '500px',
                 margin: '0 auto',

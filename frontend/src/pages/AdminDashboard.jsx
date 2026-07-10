@@ -297,7 +297,7 @@ const AdminDashboard = () => {
             <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500 }}>
               Superuser Workspace Portal
             </span>
-            <h1 style={{ fontSize: '2.8rem', marginTop: '0.4rem' }}>Startup Agency CRM Dashboard</h1>
+            <h1 style={{ fontSize: 'var(--fs-h1)', marginTop: '0.4rem' }}>Startup Agency CRM Dashboard</h1>
           </div>
           <button onClick={handleCSVExport} className="btn btn-secondary">
             <Download size={14} /> Export clients CSV
@@ -345,7 +345,7 @@ const AdminDashboard = () => {
             <Layers size={22} style={{ color: 'var(--gold)' }} /> Active Inquiries CRM Matrix
           </h2>
 
-          <div className="grid-2" style={{ gridTemplateColumns: '1.2fr 0.8fr', gap: '2.5rem' }}>
+          <div className="grid-project-detail">
             
             {/* Table of active inquires */}
             <div className="glass-panel" style={{ overflowX: 'auto', padding: '1.5rem' }}>
@@ -555,7 +555,7 @@ const AdminDashboard = () => {
         </div>
 
         {/* Project showcases editor grid */}
-        <div className="grid-2" style={{ gridTemplateColumns: '1.2fr 0.8fr' }}>
+        <div className="grid-project-detail">
           
           {/* List of current showcases */}
           <div className="glass-panel" style={{ padding: '2rem' }}>

@@ -138,22 +138,15 @@ const ProjectDetail = () => {
           <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500 }}>
             {project.category} Website Archetype
           </span>
-          <h1 style={{ fontSize: '2.8rem', marginTop: '0.4rem' }}>{project.title}</h1>
+          <h1 style={{ fontSize: 'var(--fs-h1)', marginTop: '0.4rem' }}>{project.title}</h1>
         </div>
 
         {/* Dynamic Image Gallery and Live IFrame Demo */}
-        <div className="grid-2" style={{ marginBottom: '4rem', gridTemplateColumns: '1.2fr 0.8fr' }}>
+        <div className="grid-project-detail" style={{ marginBottom: '4rem' }}>
           
           {/* Main Slider Cover & Switcher buttons */}
           <div>
-            <div className="glass-panel" style={{
-              height: '420px',
-              overflow: 'hidden',
-              borderRadius: '16px',
-              marginBottom: '1rem',
-              position: 'relative',
-              background: '#16161a'
-            }}>
+            <div className="detail-slider-wrapper">
               <img 
                 src={project.previewImages[activeImageIdx]} 
                 alt={project.title} 
@@ -281,13 +274,13 @@ const ProjectDetail = () => {
         </div>
 
         {/* Interactive Quote Builder lead capture form */}
-        <div className="grid-2" style={{ gridTemplateColumns: '1fr 1fr' }}>
+        <div className="grid-project-detail-equal">
           
           {/* Form select addons checklist */}
           <div className="glass-panel" style={{ padding: '2.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem', color: 'var(--gold)' }}>
               <Calculator size={22} />
-              <h3 style={{ fontSize: '1.5rem', margin: 0 }}>Interactive Quote Builder</h3>
+              <h3 style={{ fontSize: 'var(--fs-h3)', margin: 0 }}>Interactive Quote Builder</h3>
             </div>
             
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '2rem' }}>

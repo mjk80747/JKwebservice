@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import { Search, SlidersHorizontal } from 'lucide-react';
+import CallToActionSection from '../components/CallToActionSection';
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
@@ -49,7 +50,8 @@ const Portfolio = () => {
   }, [selectedCategory, searchQuery]);
 
   return (
-    <section style={{ padding: '4rem 0' }}>
+    <div>
+      <section style={{ padding: '4rem 0' }}>
       <div className="container animate-fade-in">
         
         {/* Header content info */}
@@ -57,7 +59,7 @@ const Portfolio = () => {
           <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
             Our Catalog
           </span>
-          <h1 style={{ fontSize: '2.8rem', marginTop: '0.4rem', marginBottom: '1rem' }}>
+          <h1 style={{ fontSize: 'var(--fs-h1)', marginTop: '0.4rem', marginBottom: '1rem' }}>
             Premium Web Design Showcases
           </h1>
           <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto', fontSize: '1rem' }}>
@@ -95,7 +97,7 @@ const Portfolio = () => {
           </div>
 
           {/* Search box input */}
-          <div style={{ position: 'relative', width: '300px' }} className="form-group">
+          <div style={{ position: 'relative', width: '100%', maxWidth: '300px' }} className="form-group">
             <span style={{
               position: 'absolute',
               top: '50%',
@@ -151,7 +153,9 @@ const Portfolio = () => {
         )}
 
       </div>
-    </section>
+      </section>
+      <CallToActionSection />
+    </div>
   );
 };
 
