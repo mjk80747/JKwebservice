@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const rateLimit = require('express-rate-limit');
+const compression = require('compression');
+const helmet = require('helmet');
 const connectDB = require('./config/db');
 
 // Load environment variables
@@ -13,6 +15,11 @@ connectDB();
 const app = express();
 
 // Global Middlewares
+app.use(helmet({
+  contentSecurityPolicy: false // Disable CSP to allow external fonts & Unsplash images while keeping other protection headers active
+}));
+app.use(compression()); // Gzip compression for smaller payloads and faster response times
+
 app.use(cors({
   origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
   credentials: true

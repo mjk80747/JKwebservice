@@ -5,12 +5,14 @@ const invoiceSchema = new mongoose.Schema(
     inquiryId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Inquiry',
-      required: true
+      required: true,
+      index: true
     },
     userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
-      required: true
+      required: true,
+      index: true
     },
     amount: {
       type: Number,

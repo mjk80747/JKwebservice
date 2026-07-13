@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { MessageCircle, Phone } from 'lucide-react';
@@ -8,19 +8,19 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProtectedRoute from './components/ProtectedRoute';
 
-// Pages
-import Home from './pages/Home';
-import Portfolio from './pages/Portfolio';
-import ProjectDetail from './pages/ProjectDetail';
-import About from './pages/About';
-import Founder from './pages/Founder';
-import Contact from './pages/Contact';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import AdminLogin from './pages/AdminLogin';
-import UserDashboard from './pages/UserDashboard';
-import AdminDashboard from './pages/AdminDashboard';
-import NotFound from './pages/NotFound';
+// Lazy Loaded Pages
+const Home = lazy(() => import('./pages/Home'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
+const About = lazy(() => import('./pages/About'));
+const Founder = lazy(() => import('./pages/Founder'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Login = lazy(() => import('./pages/Login'));
+const Signup = lazy(() => import('./pages/Signup'));
+const AdminLogin = lazy(() => import('./pages/AdminLogin'));
+const UserDashboard = lazy(() => import('./pages/UserDashboard'));
+const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function AppContent() {
   const location = useLocation();
@@ -31,41 +31,48 @@ function AppContent() {
     <div className="app-container">
       {showHeaderFooter && <Navbar />}
       <main className="main-content">
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio/:id" element={<ProjectDetail />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/founder" element={<Founder />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/admin/login" element={<AdminLogin />} />
+        <Suspense fallback={
+          <div className="suspense-loading-container">
+            <div className="suspense-spinner"></div>
+            <p className="suspense-text">Loading GastroSuite...</p>
+          </div>
+        }>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/:id" element={<ProjectDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/founder" element={<Founder />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/admin/login" element={<AdminLogin />} />
 
-          {/* Protected Client Workspace Routes */}
-          <Route 
-            path="/dashboard" 
-            element={
-              <ProtectedRoute>
-                <UserDashboard />
-              </ProtectedRoute>
-            } 
-          />
+            {/* Protected Client Workspace Routes */}
+            <Route 
+              path="/dashboard" 
+              element={
+                <ProtectedRoute>
+                  <UserDashboard />
+                </ProtectedRoute>
+              } 
+            />
 
-          {/* Protected Administrator CRM Routes */}
-          <Route 
-            path="/admin/dashboard" 
-            element={
-              <ProtectedRoute adminOnly={true}>
-                <AdminDashboard />
-              </ProtectedRoute>
-            } 
-          />
+            {/* Protected Administrator CRM Routes */}
+            <Route 
+              path="/admin/dashboard" 
+              element={
+                <ProtectedRoute adminOnly={true}>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              } 
+            />
 
-          {/* 404 Route fallback */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            {/* 404 Route fallback */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
       {showHeaderFooter && <Footer />}
 

@@ -34,10 +34,9 @@ const AdminLogin = () => {
   };
 
   return (
-    <section style={{ padding: '6.5rem 0' }}>
-      <div className="container" style={{ maxWidth: '450px' }}>
-        <div className="glass-panel animate-fade-in" style={{
-          padding: '3rem 2.5rem',
+    <section className="auth-section">
+      <div className="container auth-container" style={{ maxWidth: '450px' }}>
+        <div className="glass-panel auth-glass-panel animate-fade-in" style={{
           border: '1px solid rgba(223, 183, 108, 0.35)',
           boxShadow: '0 8px 32px 0 rgba(223, 183, 108, 0.08)'
         }}>

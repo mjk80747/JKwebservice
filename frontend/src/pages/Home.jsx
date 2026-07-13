@@ -247,6 +247,7 @@ const Home = () => {
                   <img 
                     src="/founder.jpg" 
                     alt="Mundlapati Jayakrishna portrait" 
+                    loading="lazy"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '53% 36%', transform: 'scale(1.2)' }}
                     onError={(e) => {
                       e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop";

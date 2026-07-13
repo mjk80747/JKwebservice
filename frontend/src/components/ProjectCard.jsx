@@ -20,6 +20,7 @@ const ProjectCard = ({ project }) => {
         <img 
           src={project.previewImages[0]} 
           alt={project.title}
+          loading="lazy"
           style={{
             width: '100%',
             height: '100%',

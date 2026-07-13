@@ -43,9 +43,9 @@ const Signup = () => {
   };
 
   return (
-    <section style={{ padding: '4rem 0' }}>
-      <div className="container" style={{ maxWidth: '500px' }}>
-        <div className="glass-panel animate-fade-in" style={{ padding: '3rem 2.5rem' }}>
+    <section className="auth-section" style={{ minHeight: 'auto' }}>
+      <div className="container auth-container" style={{ maxWidth: '500px' }}>
+        <div className="glass-panel auth-glass-panel animate-fade-in">
           
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
             <img src="/logo.jpg" alt="JK Web Solutions Logo" style={{ height: '60px', width: '60px', borderRadius: '12px', marginBottom: '1.2rem', border: '1px solid rgba(223, 183, 108, 0.3)', boxShadow: '0 0 15px rgba(223, 183, 108, 0.1)' }} />

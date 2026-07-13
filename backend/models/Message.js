@@ -5,7 +5,8 @@ const messageSchema = new mongoose.Schema(
     inquiryId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Inquiry',
-      required: true
+      required: true,
+      index: true
     },
     senderId: {
       type: mongoose.Schema.Types.ObjectId,
