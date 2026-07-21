@@ -613,6 +613,7 @@ const AdminDashboard = () => {
                   <option value="Cloud Kitchen">Cloud Kitchen</option>
                   <option value="Sushi Lounge">Sushi Lounge</option>
                   <option value="Bakery">Bakery</option>
+                  <option value="Portfolio">Portfolio</option>
                 </select>
               </div>
 

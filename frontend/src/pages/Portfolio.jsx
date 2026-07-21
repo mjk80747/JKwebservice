@@ -9,7 +9,7 @@ const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = ['All', 'Fine Dining', 'Café', 'Cloud Kitchen', 'Sushi Lounge', 'Bakery'];
+  const categories = ['All', 'Fine Dining', 'Café', 'Cloud Kitchen', 'Sushi Lounge', 'Bakery', 'Portfolio'];
 
   useEffect(() => {
     const fetchProjects = async () => {

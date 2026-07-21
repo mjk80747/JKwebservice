@@ -14,7 +14,7 @@ const projectSchema = new mongoose.Schema(
     category: {
       type: String,
       required: [true, 'Please select a category'],
-      enum: ['Fine Dining', 'Café', 'Cloud Kitchen', 'Sushi Lounge', 'Bakery']
+      enum: ['Fine Dining', 'Café', 'Cloud Kitchen', 'Sushi Lounge', 'Bakery', 'Portfolio']
     },
     techStack: [
       {
